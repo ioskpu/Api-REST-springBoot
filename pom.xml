@@ -32,6 +32,12 @@
 			<version>42.7.2</version>
 			<scope>runtime</scope>
 		</dependency>
+
+		<dependency>
+    		<groupId>org.springframework.security</groupId>
+    		<artifactId>spring-security-crypto</artifactId>
+    		<version>5.4.6</version> <!-- Asegúrate de usar la versión que necesitas -->
+		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
