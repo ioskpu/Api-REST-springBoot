@@ -16,7 +16,7 @@ import com.sabassoft.apirest.apirest.Entities.Empleados;
 import com.sabassoft.apirest.apirest.Repositories.EmpleadosRepository;
 
 @RestController
-@RequestMapping("/api/clientes")
+@RequestMapping("/api/empleados")
 public class EmpleadosControllers {
 
     @Autowired
