@@ -1,5 +1,6 @@
 package com.sabassoft.apirest.apirest.Entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +19,8 @@ public class Empleados {
     private String apellido;
     private String puesto;
     private String usuario;
+    private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    @Column(nullable=false)
     private String password;
 
     
@@ -52,11 +55,11 @@ public class Empleados {
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
+    
     public String getPassword() {
         return password;
     }
-    public void setPassword(String password) {
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    public void setPassword(String password) {        
         this.password = passwordEncoder.encode(password);
     }
     
