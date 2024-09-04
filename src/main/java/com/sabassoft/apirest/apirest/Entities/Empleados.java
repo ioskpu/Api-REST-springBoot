@@ -18,8 +18,7 @@ public class Empleados {
     private String nombre;
     private String apellido;
     private String puesto;
-    private String usuario;
-    private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    private String usuario;    
     @Column(nullable=false)
     private String password;
 
@@ -60,8 +59,8 @@ public class Empleados {
         return password;
     }
     public void setPassword(String password) {        
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         this.password = passwordEncoder.encode(password);
-    }
-    
+    }   
 
 }
